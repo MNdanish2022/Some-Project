@@ -1,0 +1,441 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:sans-serif,'Franklin Gothic Medium';
+    box-sizing: border-box;
+}
+:root {
+    --blue: #6495ed;
+    --white: #faf0e6;
+    --orange:#ff7301;
+  }
+  
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #080808;
+    color: #fff;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(./images/tech2.png);
+    background-size: cover;
+    background-position: center;
+
+}
+.container{
+    padding: 10px 10%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:100%;
+    height:65px;
+    background-color: #262626;
+
+}
+.logo{
+    
+    width:130px;
+    overflow: hidden;
+    font-size: 30px;
+    cursor: pointer;
+
+}
+nav ul{
+    margin-right: 40px;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 10px 16px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    font-weight: 500;
+    font-size: 16px;
+}
+nav ul li a::after{
+content: '';
+width:0;
+height: 3px;
+/* background: rgb(144, 206, 235); */
+background: var(--orange);
+position:absolute;
+left: 0;
+bottom:-6px;
+}
+nav ul li a:hover::after{
+    width: 100%;
+    transition: 0.3s ease-in;
+}
+
+.header-text{
+    margin-top:20%;
+    font-size: 30px;
+}
+.header-text h2{
+    font-size: 60px;
+    margin-top: 20px;
+}
+.header-text h2 span{
+    /* color: rgb(70, 177, 248); */
+    color:#FF5733;
+}
+
+/* ===========About============= */
+#about{
+    padding: 80px 0;
+    color: rgb(211, 218, 218);
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-2 .about-p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    width: 50%;
+    text-transform: capitalize;
+    letter-spacing:1px;
+    line-height: 24px;
+}
+
+.about-col-2 .progress-bars{
+     display: grid;
+     grid-template-columns: repeat(2,1fr);
+     grid-gap: 2rem;
+    
+} 
+.about-col-2 .progress-bars .progress-bar{
+    display: flex;
+    flex-direction: column;
+}
+.progress-bar .p-title{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.progress-bar .p-con{
+    display: flex;
+    align-items: center;
+}
+.p-con .progress{
+    width: 100%;
+    height: 0.45rem;
+    background-color: gray;
+    margin-left: 1rem;
+    position: relative;
+}
+.progress-bars .progress-bar .p-con .progress span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--orange);
+}
+.progress-bars .progress-bar .p-con .progress .html{
+    width: 80%;
+}
+.progress-bars .progress-bar .p-con .progress .css{
+    width:85%;
+}
+.progress-bars .progress-bar .p-con .progress .js{
+    width: 75%;
+}
+.progress-bars .progress-bar .p-con .progress .py{
+    width: 50%;
+}
+
+
+
+
+.sub-title{
+    font-size:60px;
+    font-weight: 600;
+    color: white;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+    justify-content: center;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 30px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+    /* display: none; */
+
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents ul li span{
+    font-size: 14px;
+    color:#b54769;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+
+
+/* ================= Services ============== */
+
+/* =========== Portfolio ============= */
+#portfolio{
+    padding: 50px 0;
+}
+.p-head{
+    letter-spacing: 3px;
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width:100%;
+    /* height: 100%; */
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height:0;
+    background: linear-gradient(rgba(0,0,0,0.6),#ff7300);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color:black;
+    text-decoration: none;
+    display: flex;
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+    line-height: 16px;
+    background:white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work .layer a i{
+    font-size: 30px;
+
+}
+.work .layer a:hover{
+    color:var(--orange);
+}
+.work:hover img{
+    transform: scale(1.1);
+
+}
+.work:hover .layer{
+height: 100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    /* border: 1px solid #ff004f; */
+    border: 1px solid var(--orange);
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background:var(--orange);
+}
+
+/* ===== contact ===== */
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color:var(--orange);
+    margin-right: 15px;
+    font-size: 25px;
+
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+
+}
+.social-icons a:hover{
+    color: var(--orange);
+    transform:translateY(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background:var(--orange);
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+#msg{
+    color: #61b752;
+    margin-top: -20px;
+    display: block;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+
+
+/* ====== CSS For Rsponsive ======= */
+nav .fa{
+    display: none;
+}
+    @media only screen and (max-width:600px) {
+        #header{
+            background-image: url(/images/tech4.png);
+        }
+        .header-text{
+            margin-top: 100%;
+            font-size: 16px;
+        }
+        .header-text h1{
+            font-size: 30px;
+        }
+        nav{
+            width: 100%;
+        }
+        nav .fa{
+            display: block;
+            font-size: 25px;
+            margin-right: 12px;
+        }
+        nav ul{
+           background:var(--orange);
+           position:fixed;
+           top: 0;
+           right: -250px;
+           width:200px;
+           height: 100vh;
+           padding-top: 50px;
+           z-index: 2;
+           transition: right 0.5s;
+        }
+        nav ul li{
+            display: block;
+            margin-top: 25px;
+        }
+        nav ul .fa{
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            cursor: pointer;
+
+        }
+        .sub-title{
+            font-size: 40px;
+        }
+        .about-col-1, .about-col-2{
+            flex-basis: 100%;
+        }
+        .about-col-1{
+            margin-bottom: 30px;
+        }
+        .about-col-2{
+            font-size: 14px;
+        }
+        .tab-links{
+            font-size: 16px;
+            margin-right: 20px;
+        }
+        .contact-left, .contact-right{
+            flex-basis: 100%;
+        }
+        .copyright{
+            font-size: 14px;
+        }
+        
+    }
+    @media only screen and (max-width:300px) {
+        nav{
+            width:300px;
+        }
+        #header{
+           width: 300px;
+        }
+        
+    }
