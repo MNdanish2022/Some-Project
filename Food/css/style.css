@@ -1,0 +1,899 @@
+@font-face{
+    font-family:'Railway-regular';
+    src: url(../fonts/Raleway-Regular.ttf);
+}
+@font-face {
+    font-family: 'Railway-medium';
+    src: url(../fonts/Raleway-Medium.ttf);
+}
+@font-face {
+    font-family: 'Railway-bold';
+    src: url(../fonts/Raleway-Bold.ttf);
+}
+@font-face {
+    font-family: 'Railway-semibold';
+    src: url(../fonts/Raleway-SemiBold.ttf);
+}
+@font-face {
+    font-family: 'Railway-black';
+    src: url(../fonts/Raleway-Black.ttf);
+}
+@font-face{
+    font-family:'Railway-extra';
+    src: url(../fonts/Raleway-ExtraBold.ttf);
+}
+
+:root{
+    --primary:#EEBF00;
+    --secondary:#232B38;
+    --ternary:#6C6C6C;
+    --danger:#FE4545;
+    --pure:#FEFEFE;
+    --light:#f0f0f0;
+    --heaven:#ffffff;
+    --footer:#2D333f;
+
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Railway-medium';
+    
+}
+html{
+    scroll-behavior:smooth;
+}
+.container{
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+@media(min-width:576px){
+    .container{
+        max-width:540px;
+    }
+}
+@media(min-width:768px){
+    .container{
+        max-width:720px;
+    }
+
+}
+@media(min-width:1000px){
+    .container{
+        max-width:998px;
+    }
+}
+@media(min-width:1200px){
+    .container{
+        max-width:1152px;
+    }
+}
+/* ====Utility Class ======================================================================================= */
+.flex{
+    display: flex;
+}
+.flex-1{
+    flex: 1;
+}
+.justify-bw{
+    justify-content: space-between;
+}
+.item-align{
+    align-items: center;
+}
+.justify-center{
+    justify-content: center;
+}
+.magic-shadow{
+    position: relative;
+    background-color:var(--heaven);
+}
+.magic-shadow::after{
+content:'';
+position: absolute;
+display: block;
+width: 100%;
+height: 69px;
+background: url(../icons/shadow.svg);
+background-repeat: no-repeat;
+background-position: center;
+bottom: -22px;
+z-index: -1;
+
+}
+.magic-shadow-sm{
+    position: relative;
+    background-color:var(--heaven);
+}
+.magic-shadow-sm::after{
+    content:'';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 69px;
+    background: url(../icons/shadow-sm.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    
+    }
+.btn{
+    padding:0.80rem 0.75rem;
+    border-radius: 4px;
+    border: none;
+    line-height: 0.8;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.btn-primary{
+    background-color: var(--primary);
+    color: var(--heaven);
+    border: 1px solid var(--primary);
+}
+.btn-secondary{
+    background-color: var(--secondary);
+    color: var(--heaven);
+    border: 1px solid var(--secondary);
+
+}
+.btn-primary:hover{
+    background-color: var(--heaven);
+    color: var(--primary);
+}
+.btn-secondary:hover{
+    background-color:var(--heaven);
+    color: var(--secondary);
+}
+.section-heading{
+    font-family:'Railway-bold';
+    text-align: center;
+    position: relative;
+    margin-bottom:6rem;
+
+}
+.section-heading:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 30px;
+    background-image: url(../icons/hr.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: -40px;
+}
+.text-center{
+    text-align: center;
+}
+.text-primary{
+    color: var(--primary);
+}
+.text-pure{
+    color: var(--pure);
+}
+
+/* ======================================= */
+
+header.topbar{
+    background:var(--secondary);
+    color: var(--pure);
+    font-family:'Railway-semibold';
+    padding: 0.75rem 0;
+}
+header.topbar .auth > div a{
+    color: var(--pure);
+    text-decoration: none;
+}
+header.topbar .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header.topbar .container .auth{
+    display: flex;
+}
+header.topbar .icons a{
+    margin-right:0.6rem;
+}
+header.topbar .auth .divider{
+    padding: 0 1rem;
+}
+header.topbar .auth > div img{
+    margin-right: 0.35rem;
+}
+
+/* ====Nav==== */
+nav .top .contact h5, nav .top .time h5{
+    /* font-size: 30px; */
+    font-family: "Railway-black";
+    margin-bottom: 0.25rem;
+}
+nav .top{
+    padding: 1.5rem 0;
+}
+nav .top .contact h6, nav .top .time h6{
+    font-family: 'Railway-medium';
+    letter-spacing: 0.055rem;
+    font-size: 0.75rem;
+    color: var(--ternary);
+}
+nav .top .contact img, nav .top .time img{
+    margin-right: 0.5rem;
+}
+
+nav .navbar a{
+    text-decoration: none;
+    color: var(--secondary);
+    font-family: 'Railway-semibold';
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    transition: all .3s ease;
+}
+nav .navbar a.active{
+    background: var(--primary);
+    color: var(--pure);
+}
+nav .navbar a:hover{
+    background-color: var(--primary);
+    color: var(--pure);
+}
+
+/* === header Content ==== */
+header.hero{
+    height: 600px;
+    background-image: url(../images/hero.png);
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    overflow: hidden;
+}
+header.hero .container{
+    position: relative;
+}
+header.hero .welcome span{
+    font-family: "Railway-bold";
+    color:var(--secondary);
+    margin-right: 0.75rem;
+}
+header.hero h1{
+    font-family:'Railway-extra';
+    color: var(--secondary);
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+}
+header.hero h1 span{
+    color: var(--primary);
+}
+header.hero p{
+    font-family: 'Railway-medium';
+    width:50%;
+    line-height: 1.5;
+    margin-bottom:1rem;
+}
+header.hero button:first-child{
+    margin-right: 0.50rem;
+}
+header.hero .welcome{
+    margin-bottom:0.25rem;
+}
+header.hero .hero-img{
+position: absolute;
+top:-40px;
+right: 40px;
+
+}
+
+
+/* ======== Section =========== */
+section{
+    padding: 4rem 0;
+}
+section.top-products{
+    background-color: var(--light);
+}
+section.top-products .food-slider .food-card{
+    background:var(--heaven);
+    padding:1.5rem 0;
+    border-radius: 4px;
+}
+section.top-products .food-slider .food-card .product-img img{
+    width: 80%;
+    height: 200px;
+    object-fit: contain;
+    padding-bottom: 1rem;
+     
+}
+hr{
+    border: 1px solid var(--light);
+    opacity: 0.8;
+    margin: 1rem 0;
+}
+section.top-products .food-slider .food-card h2{
+    font-family:'Railway-bold';
+    font-size: 1.3 rem;
+    margin-bottom: 0.25rem;
+}
+section.top-products .food-slider .food-card .stars img{
+    padding-right: 0.25rem;
+    margin-bottom: 1rem;
+}
+section.top-products .food-slider .food-card .price{
+    color: var(--danger);
+    font-family: "Railway-medium";
+    margin-bottom: 1rem;
+}
+section.top-products .food-slider .food-card button{
+    font-family: "Railway-medium";
+    color: var(--secondary);
+    background-color: var(--heaven);
+    border: 2px solid var(--primary);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.food-slider .food-card button img{
+    background: var(--primary);
+    padding:0.50rem;
+    height:32px;
+    margin-right: 1.2rem;
+}
+section.top-products .food-slider .food-card button:hover{
+    background: var(--primary);
+    color: var(--heaven);
+}
+.slick-slide{
+    margin:0 27px;
+}
+.slick-list{
+    margin:0 -27px;
+}
+.top-products .slider{
+    position: relative;
+}
+.top-products .slider-btn{
+    width:30px;
+    height: 30px;
+    border: none;
+    background-color: var(--primary);
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+}
+.prev-btn{
+    position: absolute;
+    top:46%;
+    left:-3rem;
+    z-index: 1;
+}
+.next-btn{
+    position: absolute;
+    top:46%;
+    right:-3rem;
+    z-index: 1;
+}
+.top-products .btn-wrapper{
+    margin-top: 2rem;
+
+}
+.slick-track{
+    /* width:3000px!important; */
+    /* overflow: hidden; */
+    padding: 1rem 0;
+}
+
+
+/* =============About Meal ============== */
+section.about-meal img{
+    width: 85%;
+
+}
+section.about-meal h2{
+    font-family: 'Railway-bold';
+    font-size: 1.4rem;
+    color: var(--secondary);
+    margin-bottom:2rem;
+}
+section.about-meal p{
+    line-height: 1.7;
+    margin-bottom: 4rem;
+
+}
+
+/* ========== Our Services =========== */
+section.our-services{
+    background: var(--light);
+    position: relative;
+    z-index: 0;
+}
+section.our-services .services-card{
+    background: var(--heaven);
+    text-align: center;
+    padding: 2rem;
+    padding-top: 4rem;
+    position: relative;
+    border-radius: 4px;
+    margin-right: 2rem;
+}
+section.our-services .card-wrapper{
+    margin-right: -2rem;
+    margin-top: 8rem;
+}
+.services-card img{
+    position: absolute;
+    top:-50px;
+    left:50%;
+    transform: translateX(-50%);
+}
+.services-card h2{
+    font-family: 'Railway-bold';
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+.services-card p{
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* =======Big Deal ========== */
+section.big-deals{
+    background: linear-gradient(
+        rgba(35,43,56,0.9),
+        rgba(35,43,56,0.9)
+    ),url(../images/food-table.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+section.big-deals .timer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -2rem;
+    margin-bottom: 2rem;
+}
+section.big-deals .timer div{
+    margin-right: 2rem;
+    background: var(--primary);
+    width: 150px;
+    height: 150px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.timer div span:first-child{
+font-family: "Railway-semibold";
+font-size: 2.5rem;
+color: var(--heaven);
+margin-bottom: 0.05rem;
+}
+.timer div span:last-child{
+font-family: 'Railway-medium';
+color: var(--heaven);
+}
+
+/* ============= Blog ========= */
+section.latest-news{
+    background:var(--light);
+    position: relative;
+    z-index: 0;
+}
+.latest-news .article-wrapper .card img{
+    width: 100%;
+
+}
+section.latest-news .article-wrapper{
+    display: flex;
+    margin-right: -2rem;
+}
+section.latest-news .article-wrapper .card{
+    margin-right:2rem;
+    background: var(--heaven);
+    border-radius: 4px;
+}
+section.latest-news .article-wrapper .card .card-content{
+    padding: 2rem;
+}
+.article-wrapper .card .card-content .post-meta{
+margin-bottom: 1rem;
+}
+.article-wrapper .card .card-content .post-meta .comment-count{
+    margin-left: 1rem;
+}
+.article-wrapper .card .card-content h2{
+    font-family: "Railway-bold";
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+.article-wrapper .card .card-content p{
+    line-height: 1.6;
+}
+.latest-news .btn-wrapper{
+    margin-top: 2rem;
+}
+
+/* ================ Section Subscribe ================== */
+.subscribe .container >div:first-child img{
+    width: 90%;
+}
+.subscribe{
+    background-color: var(--primary);
+}
+.subscribe h1{
+    font-family: 'Railway-bold';
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.subscribe p{
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height:1.5;
+}
+.subscribe .input-wrap{
+    background-color: var(--heaven);
+    display: flex;
+    padding: 0.3rem;
+    border-radius:7px;
+}
+.subscribe .input-wrap input{
+    width: 100%;
+    border: none;
+    padding: 0 1rem;
+    font-size: 1rem;
+    outline: none;
+}
+.subscribe .input-wrap button{
+    padding: 0.8rem 2rem;
+    border: none;
+    background-color: var(--primary);
+    color: var(--pure);
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all .3s ease;
+    outline: none;
+
+}
+.subscribe .input-wrap button:hover{
+    background-color: var(--secondary);
+}
+
+/* ===========Section Contact us ================= */
+section.contact-us{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+section.contact-us .contact-info-wrapper{
+    padding: 4rem 0;
+    
+}
+section.contact-us .contact-info{
+    display: flex;
+    justify-content: center;
+
+}
+section.contact-us .contact-info > div > div{
+display: flex;
+align-items: center;
+margin-bottom: 2rem;
+}
+section.contact-us .contact-info > div > div img{
+    margin-right: 1rem;
+}
+section.contact-us .contact-info > div > div > div{
+    display: flex;
+    flex-direction: column;
+
+}
+section.contact-us .contact-info > div > div > div span:first-child{
+    font-family: "Railway-bold";
+    margin-bottom: 0.25rem;
+
+}
+section .map{
+    filter: grayscale(100%);
+}
+
+/* =========== Footer ========= */
+footer{
+    background:var(--footer);
+    padding: 4rem 0;
+}
+footer .container{
+    display: flex;
+    color: var(--pure);
+}
+footer .box{
+flex: 1;
+margin-right: 2rem;
+text-align: center;
+}
+footer .box ul li{
+    margin-bottom: 1rem;
+    list-style: none;
+}
+footer .box ul li a{
+    color: var(--pure);
+    text-decoration: none;
+    transition: all .3s ease-in;
+}
+footer .box ul li a:hover{
+    color: var(--primary);
+}
+footer .instagram-api .post-wrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+footer .instagram-api .post-wrapper > div{
+    width: calc(1/3*100% - (1-1/3)*10px);
+    margin-bottom: 10px;
+}
+footer .instagram-api img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+footer .box h3{
+    border-bottom: 1px solid var(--primary);
+    padding-bottom:1rem;
+    margin-bottom: 1rem;
+}
+footer .box p{
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+footer .box:nth-child(3) > div {
+    display: flex;
+    justify-content: center;
+
+}
+footer .box:nth-child(3){
+    text-align: left;
+}
+footer .box:nth-child(3) h3{
+    text-align: center;
+}
+footer .box:nth-child(3) > div img{
+    margin-right: 1rem;
+}
+footer .box:nth-child(3) > div ul li{
+    margin-bottom: 1.6rem;
+}
+
+footer.copyright{
+    background-color: var(--secondary);
+    color: var(--pure);
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 0.75rem;
+}
+footer.copyright a{
+    text-decoration: none;
+    color: var(--primary);
+}
+
+/* ========================= */
+.main-warpper{
+    position: relative;
+    width: 100%;
+    height: 100Vh;
+    overflow: hidden;
+
+}
+.nav-background{
+    width: 100%;
+    height: 100%;
+    background: var(--light);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    z-index: 1;
+}
+.nav-trigger{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 15px;
+    display: none;
+
+}
+.nav-trigger svg{
+    transform: rotate(90deg) scaleX(-1);
+    width: 40px;
+    height: 40px;
+}
+.site-content-wrapper{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: var(--heaven);
+    z-index: 2;
+    transition: all .3s ease-in;
+}
+.site-content-wrapper.scaled{
+transform: scale(0.9) translateX(90%);
+border-radius: 3px;
+box-shadow: 0 3px 10px 0 var(--secondary);
+}
+.site-content{
+    width: 100%;
+    height: 100%;
+    overflow-x:hidden;
+}
+
+/* ====== Responsive ============ */
+.nav-background .mobile-logo{
+    padding: 1rem;
+
+}
+.nav-background .mobile-nav{
+    padding: 1rem;
+}
+.nav-background .mobile-nav ul li{
+    list-style: none;
+    margin-bottom: 1rem;
+
+
+}
+.nav-background .mobile-nav ul li a{
+    text-decoration:none;
+    color: var(---secondary);
+    font-family: "Railway-medium";
+}
+.nav-background .mobile-nav ul li a:hover{
+color: var(--primary);
+}
+.nav-background .contact, .nav-background .time{
+    padding: 1rem;
+    padding-left: 0;
+
+}
+.nav-background .contact img{
+    margin-right: 1rem;
+}
+.nav-background .contact h5, .nav-background .time h5{
+    font-family: "Railway-bold";
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+}
+.nav-background .contact h6, .nav-background .time h6{
+    font-size:0.85rem;
+}
+.nav-background .time img{
+    margin-right: 1rem;
+}
+
+.nav-background .cart{
+    margin-bottom: 2rem;
+}
+.nav-background .cart a{
+    text-decoration: none;
+    color: var(--secondary);
+    font-family: "Railway-bold";
+}
+.nav-background .cart img{
+margin-right: 0.75rem;
+width: 20px;
+height: 20px;
+}
+
+@media (max-width:996px){
+.nav-trigger{
+    display: block;
+
+}
+header.topbar{
+    display: none;
+
+}
+nav{
+    display: none;
+}
+header .hero{
+    margin-top: -4rem;
+}
+header.hero .hero-img{
+    right:-160px;
+    top: 100px;
+}
+.top-products .slider-btn{
+    display: none!important;
+}
+.latest-news .article-wrapper{
+    flex-direction:column;
+}
+.latest-news .article-wrapper .card{
+    margin-bottom: 4rem;
+}
+footer .instagram-api .post-wrapper > div{
+    width:calc(1/2*100% - (1  - 1/3)*10px);
+}
+}
+
+@media (max-width:770px){
+    .about-meal .about-meal-wrap{
+        flex-direction: column;
+    }
+    .about-meal .about-meal-wrap img{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    section.our-services .card-wrapper{
+        flex-direction: column;
+
+    }
+    section.our-services .card-wrapper .services-card{
+        margin-bottom: 6rem;
+    }
+    footer .container{
+        flex-direction: column;
+    }
+    footer .box{
+        text-align: left;
+        margin-right: 0;
+        margin-bottom: 3rem;
+
+    }
+    footer .box:nth-child(3) h3{
+        text-align: left;
+    }
+    footer .box:nth-child(3) > div{
+        display: block;
+    }
+    section.subscribe .container{
+        flex-direction: column;
+        padding:2rem;
+    }
+
+
+
+}
+@media (max-width:580px){
+    header.hero .hero-img{
+        right: -235px;
+        top:150px;
+    }
+    header.hero{
+        padding-left:1rem;
+    }
+    header.hero{
+        margin-top: -3rem;
+    }
+    section.big-deals .timer{
+        margin-right: -0.5rem;
+    }
+    
+    section.big-deals .timer >div{
+        margin-right: 0.50rem;
+    }
+    section.subscribe .container{
+        flex-direction: column;
+        padding: 0.50rem;
+    }
+    section.contact-us{
+        flex-direction: column;
+    }
+}
+
+
+
+
+
