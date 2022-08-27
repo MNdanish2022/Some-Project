@@ -50,7 +50,8 @@ xhr.onload = function () {
 
 xhr.send();
 
-//Time show in page
+// ===============================//Time show in page
+
 // let date= new Date();
 // let time=document.getElementById('time');
 // time.innerHTML=date;
