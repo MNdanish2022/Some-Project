@@ -254,6 +254,8 @@ header.hero{
     background-repeat: no-repeat;
     background-position: 0% 0%;
     overflow: hidden;
+    position: relative;
+    z-index: -2;
 }
 header.hero .container{
     position: relative;
@@ -338,7 +340,8 @@ section.top-products .food-slider .food-card button{
     border-radius: 4px;
     display: flex;
     align-items: center;
-    width: 50%;
+    width:auto;
+    padding-right: 0.80rem;
     font-size: 1rem;
     cursor: pointer;
     transition: all .3s ease;
@@ -347,7 +350,7 @@ section.top-products .food-slider .food-card button{
     background: var(--primary);
     padding:0.50rem;
     height:32px;
-    margin-right: 1.2rem;
+    margin-right:1rem;
 }
 section.top-products .food-slider .food-card button:hover{
     background: var(--primary);
@@ -398,6 +401,9 @@ section.top-products .food-slider .food-card button:hover{
 section.about-meal img{
     width: 85%;
 
+}
+section.about-meal img:hover{
+    transform: scale(1.1);
 }
 section.about-meal h2{
     font-family: 'Railway-bold';
@@ -494,7 +500,11 @@ section.latest-news{
 }
 .latest-news .article-wrapper .card img{
     width: 100%;
+    cursor: pointer;
 
+}
+.latest-news .article-wrapper .card img:hover{
+    transform: scale(1.1);
 }
 section.latest-news .article-wrapper{
     display: flex;
@@ -647,7 +657,11 @@ footer .instagram-api img{
     width:100%;
     height: 100%;
     object-fit: cover;
+    cursor: pointer;
 
+}
+footer .instagram-api img:hover{
+    transform: scale(1.2);
 }
 footer .box h3{
     border-bottom: 1px solid var(--primary);
@@ -862,6 +876,11 @@ footer .instagram-api .post-wrapper > div{
         flex-direction: column;
         padding:2rem;
     }
+    section.big-deals .timer div{
+        width: 120px;
+        height:120px;
+
+    }
 
 
 
@@ -875,7 +894,7 @@ footer .instagram-api .post-wrapper > div{
         padding-left:1rem;
     }
     header.hero{
-        margin-top: -3rem;
+        margin-top: 1rem;
     }
     section.big-deals .timer{
         margin-right: -0.5rem;
@@ -890,6 +909,51 @@ footer .instagram-api .post-wrapper > div{
     }
     section.contact-us{
         flex-direction: column;
+    }
+}
+@media (max-width:430px){
+    header.hero .hero-img{
+        right:-282px;
+        top:10%;
+        z-index:-1;
+    }
+    header.hero{
+        margin-top: 2rem;
+    }
+    section.big-deals .timer div{
+        width: 120px;
+        height: 80px;
+
+    }
+    .timer div span:first-child{
+        font-size: 1.3rem;
+    }
+    
+}
+@media(max-width:300px){
+    header.hero{
+        overflow: visible;
+        height:750px;
+        background-size:cover;
+    }
+    header.hero .welcome{
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+    header.hero button:first-child{
+        margin-bottom: 1rem;
+    }
+    section.big-deals .timer div{
+        width: 120px;
+        height: 50px;
+
+    }
+    .timer div span:first-child{
+        font-size: 1rem;
+    }
+
+    .timer div span:last-child{
+        font-size: 0.6rem;
     }
 }
 

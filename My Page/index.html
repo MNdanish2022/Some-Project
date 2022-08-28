@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/1cd3c605ac.js" crossorigin="anonymous"></script>
 
@@ -15,16 +16,17 @@
     <!-- ========= Header Section ============ -->
     <div id="header">
         <nav>
-            <img src="./images/Dlogo.png" class="logo">
-            <!-- <span class="logo">Deep</span> -->
+            <img src="./images/logo.png" class="logo">
             <ul id="sidemenu">
                 <li><a href="#header">Home</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <i class="fa-solid fa-xmark fa" onclick="closemenu()"></i>
             </ul>
-            <i class="fa-solid fa-bars fa" onclick="openmenu()"></i>
+            <span id='menu-button'>
+                <i class="fa-solid fa-bars fa" onclick="openmenu()"></i>
+                
+            </span>
         </nav>
         <div class="container">
 
@@ -111,6 +113,15 @@
             <h1 class="sub-title p-head">My Portfolio</h1>
             <div class="work-list">
                 <div class="work">
+                    <img src="./images/Food.png ">
+                    <div class="layer">
+                        <h3>Resturant Website</h3>
+                        <p>Online Food Shoping Website Only HTML and CSS</p>
+                        <a href="https://mndanish2022.github.io/Facebook-Layout-Clone-/" target="_blank"><i
+                                class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="work">
                     <img src="./images/work1.png ">
                     <div class="layer">
                         <h3>Facebook Layout Clone</h3>
@@ -120,7 +131,7 @@
                     </div>
                 </div>
                 <div class="work">
-                    <img src="./images/News.PNG">
+                    <img src="./images/News.png">
                     <div class="layer">
                         <h3>News web</h3>
                         <p>Simple Website to Fetch News</p>
@@ -130,7 +141,7 @@
                     </div>
                 </div>
                 <div class="work">
-                    <img src="./images/Postmaster.PNG">
+                    <img src="./images/Postmaster.png">
                     <div class="layer">
                         <h3>Web app</h3>
                         <p>This is Simple Api testing app to Get and Post Method use only</p>
@@ -175,16 +186,31 @@
             </div>
         </div>
         <div class="copyright">
-            <p>Copyright © 2022 all rights reserved</p>
+            <p>Copyright © 2022 all rights reserved <span>By Danish</span></p>
         </div>
     </div>
     <script>
         let sidemenu = document.getElementById('sidemenu')
+        let menuButton=document.getElementById('menu-button');
+        // console.log(menuButton);
+
+
         function openmenu() {
-            sidemenu.style.right = '-50px'
+       
+            sidemenu.style.top = '56px';
+            setTimeout(() => {
+               
+                menuButton.innerHTML=`<i class="fa-solid fa-xmark fa" onclick="closemenu()"></i> `                
+            },200);
+
         }
         function closemenu() {
-            sidemenu.style.right = '-250px'
+        
+            sidemenu.style.top = '-60%';
+            setTimeout(() => {
+              
+                menuButton.innerHTML=`<i class="fa-solid fa-bars fa" onclick="openmenu()"></i> `    
+            },200);
         }
     </script>
 

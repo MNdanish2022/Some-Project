@@ -1,13 +1,18 @@
 *{
     margin: 0;
     padding: 0;
-    font-family:sans-serif,'Franklin Gothic Medium';
+    font-family: 'Raleway', sans-serif;
     box-sizing: border-box;
 }
 :root {
-    --blue: #6495ed;
-    --white: #faf0e6;
-    --orange:#ff7301;
+    --primary:#F4CC04;
+    --secondary:#232B38;
+    --ternary:#6C6C6C;
+    --danger:#FE4545;
+    --pure:#FEFEFE;
+    --light:#f0f0f0;
+    --heaven:#ffffff;
+    --footer:#2D333f;
   }
   
 html{
@@ -20,9 +25,10 @@ body{
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(./images/tech2.png);
+    background:rgba(0,0,0,0.5)url(./images/tech2.png);
     background-size: cover;
     background-position: center;
+    background-blend-mode:darken;
 
 }
 .container{
@@ -34,7 +40,7 @@ nav{
     justify-content: space-between;
     width:100%;
     height:65px;
-    background-color: #262626;
+    background-color:black;
 
 }
 .logo{
@@ -43,6 +49,7 @@ nav{
     overflow: hidden;
     font-size: 30px;
     cursor: pointer;
+    padding: 1rem;
 
 }
 nav ul{
@@ -57,15 +64,16 @@ nav ul li a{
     text-decoration: none;
     color: #fff;
     position: relative;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 16px;
+    font-family:'Raleway';
 }
 nav ul li a::after{
 content: '';
 width:0;
 height: 3px;
 /* background: rgb(144, 206, 235); */
-background: var(--orange);
+background: var(--primary);
 position:absolute;
 left: 0;
 bottom:-6px;
@@ -78,14 +86,17 @@ nav ul li a:hover::after{
 .header-text{
     margin-top:20%;
     font-size: 30px;
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
 }
 .header-text h2{
     font-size: 60px;
     margin-top: 20px;
+    
 }
 .header-text h2 span{
     /* color: rgb(70, 177, 248); */
-    color:#FF5733;
+    color:var(--primary)
 }
 
 /* ===========About============= */
@@ -97,15 +108,14 @@ nav ul li a:hover::after{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-}
+}   
 .about-col-2 .about-p{
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 20px;
-    width: 50%;
-    text-transform: capitalize;
-    letter-spacing:1px;
-    line-height: 24px;
+    width: 100%;
+    /* text-transform: capitalize; */
+    line-height:1.5;
 }
 
 .about-col-2 .progress-bars{
@@ -138,7 +148,7 @@ nav ul li a:hover::after{
     top: 0;
     left: 0;
     height: 100%;
-    background-color: var(--orange);
+    background-color: var(--primary);
 }
 .progress-bars .progress-bar .p-con .progress .html{
     width: 80%;
@@ -160,6 +170,7 @@ nav ul li a:hover::after{
     font-size:60px;
     font-weight: 600;
     color: white;
+    font-family: 'Raleway', sans-serif;
 }
 .tab-titles{
     display: flex;
@@ -186,7 +197,7 @@ nav ul li a:hover::after{
 }
 .tab-contents ul li span{
     font-size: 14px;
-    color:#b54769;
+    color:var(--primary);
 }
 .tab-contents.active-tab{
     display: block;
@@ -223,7 +234,7 @@ nav ul li a:hover::after{
 .layer{
     width: 100%;
     height:0;
-    background: linear-gradient(rgba(0,0,0,0.6),#ff7300);
+    background: linear-gradient(rgba(0,0,0,0.6),var(--primary));
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -235,11 +246,12 @@ nav ul li a:hover::after{
     flex-direction: column;
     padding: 0 40;
     text-align: center;
-    font-size: 14px;
+    font-size:1.5rem;
+    font-weight:400;
     transition: height 0.5s;
 }
 .layer h3{
-    font-weight: 500;
+    font-weight: 800;
     margin-bottom: 20px;
 }
 .layer a{
@@ -262,7 +274,7 @@ nav ul li a:hover::after{
 
 }
 .work .layer a:hover{
-    color:var(--orange);
+    color:var(--primary);
 }
 .work:hover img{
     transform: scale(1.1);
@@ -276,7 +288,8 @@ height: 100%;
     margin: 50px auto;
     width: fit-content;
     /* border: 1px solid #ff004f; */
-    border: 1px solid var(--orange);
+    font-weight: 700;
+    border: 1px solid var(--primary);
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
@@ -284,7 +297,8 @@ height: 100%;
     transition: background 0.5s;
 }
 .btn:hover{
-    background:var(--orange);
+    background:var(--primary);
+    color: #080808;
 }
 
 /* ===== contact ===== */
@@ -298,7 +312,7 @@ height: 100%;
     margin-top: 30px;
 }
 .contact-left p i{
-    color:var(--orange);
+    color:var(--primary);
     margin-right: 15px;
     font-size: 25px;
 
@@ -316,12 +330,13 @@ height: 100%;
 
 }
 .social-icons a:hover{
-    color: var(--orange);
+    color: var(--primary);
     transform:translateY(-5px);
 }
 .btn.btn2{
     display: inline-block;
-    background:var(--orange);
+    background:var(--primary);
+    color: #080808;
 }
 .contact-right form{
     width: 100%;
@@ -349,12 +364,16 @@ form .btn2{
     margin-top: -20px;
     display: block;
 }
+#contact .copyright span{
+    color: var(--primary);
+    font-weight: 700;
+}
 .copyright{
     width: 100%;
     text-align: center;
     padding: 25px 0;
     background: #262626;
-    font-weight: 300;
+    font-weight: 500;
     margin-top: 20px;
     overflow: hidden;
 }
@@ -362,42 +381,62 @@ form .btn2{
 
 
 /* ====== CSS For Rsponsive ======= */
-nav .fa{
+#menu-button{
     display: none;
 }
+/* nav .fa{
+    display: none;
+} */
     @media only screen and (max-width:600px) {
         #header{
-            background-image: url(/images/tech4.png);
+            background:rgba(0,0,0,0.5) url(./images/tech4.png);
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: darken;
         }
         .header-text{
-            margin-top: 100%;
-            font-size: 16px;
+            margin-top: 50%;
+            font-size: 26px;
+            color:white;
         }
         .header-text h1{
             font-size: 30px;
         }
         nav{
             width: 100%;
+            position: fixed;
+            top: 0px;
+            z-index: 3;
+        }
+        #menu-button{
+            display: block;
         }
         nav .fa{
             display: block;
             font-size: 25px;
-            margin-right: 12px;
+            margin-right:20px;
+            transition: all .3s ease-in;
+        }
+        #bars{
+            display: block;
         }
         nav ul{
-           background:var(--orange);
+           background:rgb(14, 13, 13);
            position:fixed;
-           top: 0;
-           right: -250px;
-           width:200px;
-           height: 100vh;
+           top:-60%;
+           /* right: -250px; */
+           width:100%;
+           height: 50vh;
            padding-top: 50px;
            z-index: 2;
-           transition: right 0.5s;
+           transition:all 0.5s ease-in-out;
         }
         nav ul li{
             display: block;
             margin-top: 25px;
+        }
+        nav ul li a{
+            color:white;
         }
         nav ul .fa{
             position: absolute;
@@ -428,14 +467,19 @@ nav .fa{
         .copyright{
             font-size: 14px;
         }
-        
+        .about-col-2 .progress-bars{
+            grid-template-columns: none
+        }
     }
     @media only screen and (max-width:300px) {
         nav{
-            width:300px;
+            width:100%;
         }
         #header{
-           width: 300px;
+           width:100%;
+        }
+        #portfolio .work-list{
+            grid-template-columns: none;
         }
         
     }
