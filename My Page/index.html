@@ -15,13 +15,13 @@
 <body>
     <!-- ========= Header Section ============ -->
     <div id="header">
-        <nav>
+        <nav class="navigation-wrap">
             <img src="./images/logo.png" class="logo">
             <ul id="sidemenu">
-                <li><a href="#header">Home</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li class="nav-link"><a href="#header">Home</a></li>
+                <li class="nav-link"><a href="#portfolio">Portfolio</a></li>
+                <li class="nav-link"><a href="#about">About</a></li>
+                <li class="nav-link"><a href="#contact">Contact</a></li>
             </ul>
             <span id='menu-button'>
                 <i class="fa-solid fa-bars fa" onclick="openmenu()"></i>
@@ -31,8 +31,11 @@
         <div class="container">
 
             <div class="header-text">
-                <p>Front-End Developer</p>
+               <h3>Front-End Developer</h3>
                 <h2>Hi, I'm <span>Danish</span></h2>
+                <p>A Dedicated JavaScript developer possessing hands-on experience of working with
+                    Html, CSS, and JavaScript along with its popular library (React.js).
+                    </p>
             </div>
         </div>
     </div>
@@ -49,6 +52,7 @@
                     <P class="about-p">My Name is Muhammad Danish,I'm an enthusiastic and as a Jr Frontend Developer seeking an
                         entry-level position with Company to use my skills in coding, troubleshooting  problems,
                         and assisting in the timely completion of projects.
+                        <br> My Main Skills is Html,CSS,JavaScript,Bootstrap,React js and Jquery.
 
                     </P>
                     <div class="tab-titles">
@@ -88,11 +92,31 @@
                         </div>
 
                         <div class="progress-bar">
-                            <p class="p-title">Python</p>
+                            <p class="p-title">React JS</p>
                             <div class="p-con">
-                                <p class="p-text">50%</p>
+                                <p class="p-text">60%</p>
                                 <div class="progress">
-                                    <span class="py"></span>
+                                    <span class="rjs"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="progress-bar">
+                            <p class="p-title">Jquery</p>
+                            <div class="p-con">
+                                <p class="p-text">60%</p>
+                                <div class="progress">
+                                    <span class="jq"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="progress-bar">
+                            <p class="p-title">Bootstrap 5</p>
+                            <div class="p-con">
+                                <p class="p-text">70%</p>
+                                <div class="progress">
+                                    <span class="bt5"></span>
                                 </div>
                             </div>
                         </div>
@@ -116,25 +140,51 @@
                     <img src="./images/Food.png ">
                     <div class="layer">
                         <h3>Resturant Website</h3>
-                        <p>Online Food Shoping Website Only HTML and CSS</p>
-                        <a href="https://mndanish2022.github.io/Facebook-Layout-Clone-/" target="_blank"><i
+                        <p>Online Food Shoping Website</p>
+                        <a href="https://mndanish2022.github.io/Food.kom/" target="_blank"><i
                                 class="fa-brands fa-github"></i></a>
                     </div>
                 </div>
+
+           
+
                 <div class="work">
                     <img src="./images/work1.png ">
                     <div class="layer">
                         <h3>Facebook Layout Clone</h3>
-                        <p>Simple Facebook Clone Only HTML and CSS</p>
+                        <p>Facebook Clone Responsive Layout Design</p>
                         <a href="https://mndanish2022.github.io/Facebook-Layout-Clone-/" target="_blank"><i
                                 class="fa-brands fa-github"></i></a>
                     </div>
+                </div> 
+
+                <div class="work">
+                    <img src="./images/work-4.png ">
+                    <div class="layer">
+                        <h3>Online Food Buy</h3>
+                        <p>Food Buy website Using Bootstrap 5</p>
+                        <a href="https://mndanish2022.github.io/Foodies-Bootstrap-5/" target="_blank"><i
+                                class="fa-brands fa-github"></i></a>
+                    </div>
                 </div>
+
+                <div class="work">
+                    <img src="./images/work-5.png ">
+                    <div class="layer">
+                        <h3>Landing Page</h3>
+                        <p>Business landing page using jquery</p>
+                        <a href="https://mndanish2022.github.io/Photographer-Website/" target="_blank"><i
+                                class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>    
+                
+
+
                 <div class="work">
                     <img src="./images/News.png">
                     <div class="layer">
                         <h3>News web</h3>
-                        <p>Simple Website to Fetch News</p>
+                        <p>Simple Website to Fetch News using JavaScript</p>
                         <a href="https://mndanish2022.github.io/News-Get-Via-Fetch-Api/" target="_blank"><i
                                 class="fa-brands fa-github"></i></a>
 
@@ -144,7 +194,7 @@
                     <img src="./images/Postmaster.png">
                     <div class="layer">
                         <h3>Web app</h3>
-                        <p>This is Simple Api testing app to Get and Post Method use only</p>
+                        <p>This is Simple Api testing app to Get and Post Method Using vanila Javascript</p>
                         <a href="https://mndanish2022.github.io/Postmaster/" target="_blank"><i
                                 class="fa-brands fa-github"></i></a>
 
@@ -162,7 +212,7 @@
             <div class="row">
                 <div class="contact-left">
                     <h1 class="sub-title">Contact Me</h1>
-                    <p> <i class="fa-solid fa-paper-plane"></i> mndanish2022@gmail.com</p>
+                    <p> <i class="fa-solid fa-paper-plane"></i>danish.dev000@gmail.com</p>
                     <p> <i class="fa-solid fa-phone"></i> 0305-2858879</p>
                     <div class="social-icons">
                         <a href="https://www.facebook.com/100078852796300/" target="_blank"><i
@@ -170,7 +220,7 @@
                         <a href="https://www.linkedin.com/in/muhammad-danish-b783b7247" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                         <a href="https://wa.me/03052858879" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
                     </div>
-                    <a href="./images/my-cv.pdf" target="_blank" download="" class="btn btn2">Download CV</a>
+                    <a href="./images/Danish-JS.Dev-Cv.pdf" target="_blank" download="" class="btn btn2">Download CV</a>
                 </div>
                 <div class="contact-right">
                     <form name="submit-to-google-sheet">
@@ -189,52 +239,9 @@
             <p>Copyright © 2022 all rights reserved <span>By Danish</span></p>
         </div>
     </div>
-    <script>
-        let sidemenu = document.getElementById('sidemenu')
-        let menuButton=document.getElementById('menu-button');
-        // console.log(menuButton);
+    <script src="./main.js"></script>
+    
 
-
-        function openmenu() {
-       
-            sidemenu.style.top = '56px';
-            setTimeout(() => {
-               
-                menuButton.innerHTML=`<i class="fa-solid fa-xmark fa" onclick="closemenu()"></i> `                
-            },200);
-
-        }
-        function closemenu() {
-        
-            sidemenu.style.top = '-60%';
-            setTimeout(() => {
-              
-                menuButton.innerHTML=`<i class="fa-solid fa-bars fa" onclick="openmenu()"></i> `    
-            },200);
-        }
-    </script>
-
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbx6vpJg93GftKspUUeghea9l7H-PazNHCxGMSM3KRy-Q4xn0G2mxLAIvU3UgmaNtYa4/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById('msg')
-
-        form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => {
-                    msg.innerHTML = 'Message Sent Successfully';
-
-                    setTimeout(() => {
-                        msg.innerHTML = '';
-                    }, 5000);
-                    form.reset();
-
-                })
-                .catch(error => msg.innerHTML = 'Error Server Not Respond')
-        })
-
-    </script>
 </body>
 
 </html>
