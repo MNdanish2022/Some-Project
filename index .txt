@@ -1,0 +1,238 @@
+import React from 'react'
+
+function Form() {
+  return (
+    <>
+
+    
+<form onSubmit={(e)=>{e.preventDefault()}} className="w-[700px]">
+  <div class="relative z-0 mb-6 w-full group">
+      <input type="email" name="floating_email" id="floating_email" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required=""/>
+      <label for="floating_email" class="peer-focus:font-medium absolute text-sm text-black-500 dark:text-black-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email address</label>
+  </div>
+  <div class="relative z-0 mb-6 w-full group">
+      <input type="password" name="floating_password" id="floating_password" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required=""/>
+      <label for="floating_password" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Password</label>
+  </div>
+  <div class="relative z-0 mb-6 w-full group">
+      <input type="password" name="repeat_password" id="floating_repeat_password" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required=""/>
+      <label for="floating_repeat_password" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Confirm password</label>
+  </div>
+  <div class="grid md:grid-cols-2 md:gap-6">
+    <div class="relative z-0 mb-6 w-full group">
+        <input type="text" name="floating_first_name" id="floating_first_name" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required=""/>
+        <label for="floating_first_name" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">First name</label>
+    </div>
+    <div class="relative z-0 mb-6 w-full group">
+        <input type="text" name="floating_last_name" id="floating_last_name" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required=""/>
+        <label for="floating_last_name" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Last name</label>
+    </div>
+  </div>
+  <div class="grid md:grid-cols-2 md:gap-6">
+    <div class="relative z-0 mb-6 w-full group">
+        <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="floating_phone" id="floating_phone" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required=""/>
+        <label for="floating_phone" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Phone number</label>
+    </div>
+    <div class="relative z-0 mb-6 w-full group">
+        <input type="text" name="floating_company" id="floating_company" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required=""/>
+        <label for="floating_company" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Company</label>
+    </div>
+  </div>
+
+  <div class="relative">
+    <input type="text" id="floating_filled" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-200 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+    <label for="floating_filled" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">Floating filled</label>
+</div>
+
+<div class="relative mt-2 mb-2">
+    <input type="text" id="floating_outlined" class="outline-2 outline-slate-900 block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-4 border-gray-00 appearance-none dark:text-white dark:border-gray-900 dark:focus:border-gray-100 focus:outline-none focus:ring-2 focus:border-gray-600 peer" placeholder=" " />
+    <label for="floating_outlined" class="absolute text-sm text-black dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-gray-100 dark:bg-gray-200 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">Enter your Name</label>
+</div>
+   <button type='submit' className="relative w-full inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-[1.2rem] font-medium text-blue-700 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white  focus:outline-none dark:focus:ring-cyan-600">
+      <span class=" w-full relative px-5 py-2.5 transition-all ease-in-out duration-100 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+        Create Account
+      </span>
+    </button>
+</form>
+
+    </>
+  )
+}
+
+export default Form
+
+
+============================================== Form ============================
+
+import { useState } from 'react'
+import React from 'react'
+
+
+
+function Card() {
+
+  const [buy, setbuy] = useState(false)
+    const buy1 = () => {
+      setbuy(value => !value)
+      console.log(buy)
+    }
+
+  return (
+    <>     
+     {/* This Card */}
+    <div class="flex justify-center m-5 z-10">
+        {/* <span className=' bg-blue-400 h-2 w-10 left-10 relative'></span> */}
+      <div onClick={buy1} class={!buy ? "block rounded-lg shadow-lg shadow-gray-300 bg-white max-w-xs text-center cursor-pointer focus:active:bg-blue-400 focus-outline-none hover:bg-blue-50 focus-ring-4 border-4 border-transparent active:border-blue-400 transition-all duration-300 ease-in " :
+        "block rounded-2xl shadow-lg shadow-blue-300 max-w-xs text-center cursor-pointer focus:active:bg-blue-400 focus-outline-none bg-blue-50 focus-ring-1 border-4 border-blue-500 transition-all duration-300 ease-in"}>
+                    {/* <div class="py-3 px-6 border-b-2 border-gray-300">
+                Featured
+                </div> */}
+        <div class="p-4">
+          {buy ? <svg class="w-6 h-6 relative left-[1.2rem] top-[1.6rem]" fill="none" stroke="blue" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> :
+           <svg class="w-6 h-6 relative left-[1.2rem] top-[1.6rem]" fill="none" stroke="gray" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>}
+
+          <h5 class="text-gray-900 text-xl font-medium mb-2 ">De-identification</h5>
+          <p class="text-gray-700 text-base mb-4">
+            With supporting text below as a natural lead-in to additional content.
+          </p>
+          <button type="button" className={!buy ? "w-44 px-6 py-2.5 bg-blue-400 text-white font-medium text-lg leading-tight uppercase rounded shadow-md hover:shadow-lg  focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition-all duration-150 ease-in-out " :
+            "w-56 px-6 py-2.5 bg-blue-400 text-white font-medium text-lg leading-tight uppercase rounded shadow-md hover:shadow-lg  focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition-all duration-150 ease-in-out"}>$10</button>
+        </div>
+      </div>
+    </div>
+
+    </>
+  )
+}
+
+export default Card
+
+============================================== Card ================================
+
+import React from 'react'
+
+export default function TsComponents() {
+  return (
+    <>  <h1 className="text-5xl font-bold underline ">
+    Hello world!
+  </h1>
+  <div class="flex space-x-2 justify-center">
+    <button
+      type="button"
+      data-mdb-ripple="true"
+      data-mdb-ripple-color="light"
+      class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-500 hover:shadow focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-600 active:shadow transition duration-150 ease-in-out"
+    >Click me</button>
+  </div>
+  <div className='w-96'>
+
+    <button type="button" class="block text-xl w-full text-white bg-gradient-to-r from-blue-300 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg px-5 py-2.5 text-center mr-2 mb-2">Create Account</button>
+    <button type="button" class="text-white bg-gradient-to-br from-sky-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Create Account</button>
+    <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-blue-700 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
+      <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+        Create Account
+      </span>
+    </button>
+
+    <button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">Create Account</button>
+
+  </div>
+
+
+  <div className='flex space-x-6'>
+    {/* This Card */}
+    <div class="flex justify-center">
+      <div class="block rounded-lg shadow-lg bg-white max-w-sm text-center cursor-pointer hover:bg-blue-50 focus:ring-8 focus:ring-blue-900                  focus:outline-none ">
+        <div class="py-3 px-6 border-b border-gray-300">
+          Featured
+        </div>
+        <div class="p-6">
+          <h5 class="text-gray-900 text-xl font-medium mb-2">Special title treatment</h5>
+          <p class="text-gray-700 text-base mb-4">
+            With supporting text below as a natural lead-in to additional content.
+          </p>
+          <button type="button" class=" w-full inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">$100</button>
+        </div>
+
+      </div>
+    </div>
+
+
+    {/* This Card */}
+    <div class="flex justify-center">
+      <div class="block rounded-lg shadow-lg bg-white max-w-sm text-center cursor-pointer">
+        <div class="py-3 px-6 border-b border-gray-300">
+          Featured
+        </div>
+        <div class="p-6">
+          <h5 class="text-gray-900 text-xl font-medium mb-2">Special title treatment</h5>
+          <p class="text-gray-700 text-base mb-4">
+            With supporting text below as a natural lead-in to additional content.
+          </p>
+          <button type="button" class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Button</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</>
+  )
+}
+
+
+================================= Ts TsComponents ==============================
+
+
+
+
+
+
+
+
+import './App.css';
+import TsComponents from './TsComponents';
+import Card from './Card';
+import Form from './Form';
+import Stepper from './Stepper';
+
+
+
+
+
+function App() {
+
+  return (
+    <>
+      {/* <Stepper/> */}
+    <div className='w-full p-5'>
+      <h1 className='text-center text-3xl font-semibold font-san text-blue-700'>Main components</h1>
+    
+    <div className='w-full flex justify-center'>
+
+      <div className='w-[900px] rounded-2xl mt-10 flex justify-center p-5 bg-gray-50' >
+          <Form/>
+          </div>
+
+    </div>
+        <div className='w-full justify-center flex flex-wrap mt-10'>
+
+
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+       
+      </div>
+
+        
+    </div>
+      {/* <TsComponents/> */}
+    </>
+  );
+}
+
+export default App;
+
+================================ App ===============
